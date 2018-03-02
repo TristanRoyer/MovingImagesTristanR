@@ -52,11 +52,11 @@ local function MoveShip(event)
 	beetleship.alpha = beetleship.alpha + 0.01
 
 	-- add the scroll speed to the x-value of the Rocketship
-    rocketship.x = rocketship.x - scrollSpeed
+    rocketship.x = rocketship.x - scrollSpeed/2
 
     -- change the transparency of the Rocketship every time it moves so that it fades
     --out
-    rocketship.alpha = rocketship.alpha - 0.01
+    rocketship.alpha = rocketship.alpha - 0.001
 end
 
 --MoveShip will be called over and over again
