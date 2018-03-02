@@ -22,8 +22,8 @@ local beetleship = display.newImageRect("Images/beetleship.png", 200, 100)
 -- 2nd character image with width and height
 local rocketship = display.newImageRect("Images/rocketship.png", 200, 100)
 
---set rocketship to be transparent
-rocketship.alpha = 0
+--set rocketship to be opaque
+rocketship.alpha = 1
 
 -- set the image to be transparent
 beetleship.alpha = 0
@@ -56,7 +56,7 @@ local function MoveShip(event)
 
     -- change the transparency of the Rocketship every time it moves so that it fades
     --out
-    rocketship.alpha = rocketship.alpha + 0.01
+    rocketship.alpha = rocketship.alpha - 0.01
 end
 
 --MoveShip will be called over and over again
