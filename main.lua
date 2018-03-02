@@ -29,8 +29,8 @@ rocketship.alpha = 1
 beetleship.alpha = 0
 
 -- set the initial x and y position of beetleship
-beetleship.x = 0
-beetleship.y = 50
+beetleship.x = 20
+beetleship.y = 100
 
 --set the initial x and y position of rocketship
 rocketship.x = 400
@@ -45,7 +45,7 @@ rocketship:scale (-1, 1)
 -- Description: This function adds the scroll sp-eed to the x-value of the ship
 local function MoveShip(event)
 	-- add the scroll speed to the x-value of the ship
-	beetleship.x = beetleship.x + scrollSpeed
+	beetleship.y = beetleship.y - scrollSpeed
 
 	-- change the transparency of the ship every time it moves so that it fades 
 	-- out
