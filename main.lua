@@ -42,8 +42,8 @@ rocketship:scale (-1, 1)
 
 
 -- changes the direction when it reaches the end of the screen
-if (rocketship.x > 1000)
-then scrollSpeedRocketShip = -2
+if (rocketship.x > 1000) then
+ scrollSpeedRocketShip = -2
 rocketship.xScale = 2
 end
 
@@ -51,8 +51,8 @@ end
 
 
 -- changes the direction when it reaches the end of the screen
-if (beetleship.y < 100 ) 
-then  scrollSpeedBeetleShip = -3
+if (beetleship.y < 100 ) then
+  scrollSpeedBeetleShip = -3
 beetleship.yscale = 2
 end
 
