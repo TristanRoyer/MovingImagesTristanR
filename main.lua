@@ -41,20 +41,11 @@ rocketship.y = 200
 rocketship:scale (-1, 1) 
 
 
--- changes the direction when it reaches the end of the screen
-if (rocketship.x > 1000) then
- scrollSpeedRocketShip = -2
-rocketship.xScale = 2
-end
 
 
 
 
--- changes the direction when it reaches the end of the screen
-if (beetleship.y < 100 ) then
-  scrollSpeedBeetleShip = -3
-beetleship.yscale = 2
-end
+
 
 
 
@@ -73,6 +64,11 @@ local function MoveShip(event)
 	--Flips it vertically
 	beetleship.yScale = beetleship.yScale + 0.02
 
+	-- changes the direction when it reaches the end of the screen
+if (beetleship.y < 100 ) then
+  scrollSpeedBeetleShip = -3
+  beetleship.yScale = 2
+ end
 end
 
 -- Function: MoveRocketShip
@@ -89,6 +85,12 @@ local function MoveRocketShip(event)
 
     --Flips it horizontally
     rocketship.xScale = rocketship.xScale + 0.01
+    
+    -- changes the direction when it reaches the end of the screen
+if (rocketship.x > 1000) then
+ scrollSpeedRocketShip = -2
+ rocketship.xScale = 2
+end
 end
 --MoveShip will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
