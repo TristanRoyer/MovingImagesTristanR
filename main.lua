@@ -78,6 +78,7 @@ local function MoveRocketShip(event)
     -- change the transparency of the Rocketship every time it moves so that it fades
     --out
     rocketship.alpha = rocketship.alpha - 0.001
+end
 
 --MoveShip will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
