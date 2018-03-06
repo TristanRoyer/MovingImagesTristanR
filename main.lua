@@ -42,14 +42,17 @@ rocketship:scale (-1, 1)
 
 
 -- changes the direction when it reaches the end of the screen
-
+if (rocketship.x > 1000)
+then scrollSpeedRocketShip = -2
+rocketship.xScale = 2
+end
 
 
 
 
 -- changes the direction when it reaches the end of the screen
 if (beetleship.y < 100 ) 
-then  local scrollSpeedBeetleShip = -3
+then  scrollSpeedBeetleShip = -3
 beetleship.yscale = 2
 end
 
@@ -83,7 +86,6 @@ local function MoveRocketShip(event)
     -- change the transparency of the Rocketship every time it moves so that it fades
     --out
     rocketship.alpha = rocketship.alpha - 0.001
-end
 
     --Flips it horizontally
     rocketship.xScale = rocketship.xScale + 0.01
