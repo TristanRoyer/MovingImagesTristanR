@@ -41,14 +41,6 @@ rocketship.y = 200
 rocketship:scale (-1, 1) 
 
 
-
-
-
-
-
-
-
-
 -- Function: MoveShip
 -- Input: this function accepts an event listener
 -- Output: none
@@ -61,14 +53,18 @@ local function MoveShip(event)
 	-- out
 	beetleship.alpha = beetleship.alpha + 0.01
 
-	--Flips it vertically
-	beetleship.yScale = beetleship.yScale + 0.02
 
 	-- changes the direction when it reaches the end of the screen
-if (beetleship.y < 100 ) then
-  scrollSpeedBeetleShip = -3
-  beetleship.yScale = 2
- end
+	if (beetleship.y > 250) then
+  		scrollSpeedBeetleship = -3
+   		--beetleship.y = beetleship.y - scrollSpeedBeetleship
+ 	end
+
+	if (beetleship.y < 85) then
+  		scrollSpeedBeetleship = 4
+  		
+  	end
+ 
 end
 
 -- Function: MoveRocketShip
@@ -83,13 +79,21 @@ local function MoveRocketShip(event)
     --out
     rocketship.alpha = rocketship.alpha - 0.001
 
-    --Flips it horizontally
-    rocketship.xScale = rocketship.xScale + 0.01
+-- Flips it vertically
+rocketship.xScale = rocketship.xScale + 0.01
+
+-- makes the image grow
+rocketship.yScale = rocketship.yScale + 0.01
     
     -- changes the direction when it reaches the end of the screen
 if (rocketship.x > 1000) then
  scrollSpeedRocketShip = -2
  rocketship.xScale = 2
+end
+
+if (rocketship.x < 100) then
+	scrollSpeedRocketShip = 2
+	rocketship.xScale = 1
 end
 end
 --MoveShip will be called over and over again
