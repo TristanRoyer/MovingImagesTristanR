@@ -57,12 +57,10 @@ local function MoveShip(event)
 	-- changes the direction when it reaches the end of the screen
 	if (beetleship.y > 250) then
   		scrollSpeedBeetleship = -3
-   		--beetleship.y = beetleship.y - scrollSpeedBeetleship
  	end
 
 	if (beetleship.y < 85) then
-  		scrollSpeedBeetleship = 4
-  		
+  		scrollSpeedBeetleship = 4	
   	end
  
 end
