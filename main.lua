@@ -100,5 +100,10 @@ Runtime:addEventListener("enterFrame", MoveShip)
 --MoveRocketShip will be called over and over again
 Runtime:addEventListener("enterFrame",MoveRocketShip)
 
+--adds sound
+local FreeSound = audio.loadSound("Sounds/bensound-clearday.mp3")
+local FreeSoundChannel
+local FreeSoundChannel = audio.play(FreeSound)
+
 
 
